@@ -511,12 +511,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/firelizzard/Documents/Programming/CocoaSQLite,
-					"/Users/firelizzard/Documents/Programming/~/DerivedData/Build/Products/Debug",
-					/Users/firelizzard/Documents/Programming/CocoaSQLite/DerivedData/Build/Products/Debug,
-				);
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaSQLite/CocoaSQLite-Prefix.pch";
@@ -532,12 +526,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/firelizzard/Documents/Programming/CocoaSQLite,
-					"/Users/firelizzard/Documents/Programming/~/DerivedData/Build/Products/Debug",
-					/Users/firelizzard/Documents/Programming/CocoaSQLite/DerivedData/Build/Products/Debug,
-				);
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaSQLite/CocoaSQLite-Prefix.pch";
