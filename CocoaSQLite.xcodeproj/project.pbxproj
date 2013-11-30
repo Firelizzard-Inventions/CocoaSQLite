@@ -37,6 +37,9 @@
 		4290F07C1849946D00C67769 /* TypeExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4290F07A1849946D00C67769 /* TypeExtensions.framework */; };
 		4290F07D184994B900C67769 /* ORDA-dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4290F0791849946D00C67769 /* ORDA-dev.framework */; };
 		4290F07E184994B900C67769 /* TypeExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4290F07A1849946D00C67769 /* TypeExtensions.framework */; };
+		42D1903F1849A464002EC23A /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 42D1903E1849A464002EC23A /* .travis.yml */; };
+		42D190421849A471002EC23A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 42D190401849A471002EC23A /* LICENSE */; };
+		42D190431849A471002EC23A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 42D190411849A471002EC23A /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,9 @@
 		4290F00218498E4700C67769 /* ORDASQLiteTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORDASQLiteTableView.m; sourceTree = "<group>"; };
 		4290F0791849946D00C67769 /* ORDA-dev.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "ORDA-dev.framework"; path = "../~/DerivedData/Build/Products/Debug/ORDA-dev.framework"; sourceTree = "<group>"; };
 		4290F07A1849946D00C67769 /* TypeExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TypeExtensions.framework; path = "../~/DerivedData/Build/Products/Debug/TypeExtensions.framework"; sourceTree = "<group>"; };
+		42D1903E1849A464002EC23A /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		42D190401849A471002EC23A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		42D190411849A471002EC23A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,9 @@
 		4290EFB818498E2700C67769 = {
 			isa = PBXGroup;
 			children = (
+				42D1903E1849A464002EC23A /* .travis.yml */,
+				42D190401849A471002EC23A /* LICENSE */,
+				42D190411849A471002EC23A /* README.md */,
 				4290EFCB18498E2700C67769 /* CocoaSQLite */,
 				4290EFE018498E2700C67769 /* CocoaSQLiteTests */,
 				4290EFC418498E2700C67769 /* Frameworks */,
@@ -304,6 +313,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42D190421849A471002EC23A /* LICENSE in Resources */,
+				42D1903F1849A464002EC23A /* .travis.yml in Resources */,
+				42D190431849A471002EC23A /* README.md in Resources */,
 				4290EFD018498E2700C67769 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
