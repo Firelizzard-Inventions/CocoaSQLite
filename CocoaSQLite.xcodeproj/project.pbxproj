@@ -542,11 +542,6 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CocoaSQLite.framework/Versions/A/CocoaSQLite";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-					"/Users/firelizzard/Documents/Programming/~/DerivedData/Build/Products/Debug",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaSQLite/CocoaSQLite-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -565,11 +560,6 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CocoaSQLite.framework/Versions/A/CocoaSQLite";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-					"/Users/firelizzard/Documents/Programming/~/DerivedData/Build/Products/Debug",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaSQLite/CocoaSQLite-Prefix.pch";
 				INFOPLIST_FILE = "CocoaSQLiteTests/CocoaSQLiteTests-Info.plist";
