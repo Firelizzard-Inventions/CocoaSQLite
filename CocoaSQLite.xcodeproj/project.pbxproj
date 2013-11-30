@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		422B21321849BE63008F8BF5 /* TypeExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422B21311849BE63008F8BF5 /* TypeExtensions.framework */; };
 		423067371849B55E00BD2A38 /* ORDA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423067341849B4EC00BD2A38 /* ORDA.framework */; };
-		423067421849B5BF00BD2A38 /* TypeExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4230673F1849B5AD00BD2A38 /* TypeExtensions.framework */; };
 		423067431849B5FD00BD2A38 /* ORDA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423067341849B4EC00BD2A38 /* ORDA.framework */; };
 		4290EFC618498E2700C67769 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4290EFC518498E2700C67769 /* Cocoa.framework */; };
 		4290EFD018498E2700C67769 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4290EFCE18498E2700C67769 /* InfoPlist.strings */; };
@@ -56,20 +56,6 @@
 			remoteGlobalIDString = 42D1902C1849A42E002EC23A;
 			remoteInfo = ORDATests;
 		};
-		4230673E1849B5AD00BD2A38 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 423067391849B5AD00BD2A38 /* TypeExtensions.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 420D1A9C165BF5020097EE03;
-			remoteInfo = TypeExtensions;
-		};
-		423067401849B5AD00BD2A38 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 423067391849B5AD00BD2A38 /* TypeExtensions.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42026AD2183EA04800B1F530;
-			remoteInfo = TypeExtensionsTests;
-		};
 		4290EFDD18498E2700C67769 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4290EFB918498E2700C67769 /* Project object */;
@@ -80,8 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		422B21311849BE63008F8BF5 /* TypeExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TypeExtensions.framework; path = DerivedData/Build/Products/Debug/TypeExtensions.framework; sourceTree = "<group>"; };
 		4230672D1849B4EC00BD2A38 /* ORDA.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORDA.xcodeproj; path = Include/ORDA/ORDA.xcodeproj; sourceTree = "<group>"; };
-		423067391849B5AD00BD2A38 /* TypeExtensions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TypeExtensions.xcodeproj; path = Include/TypeExtensions/TypeExtensions.xcodeproj; sourceTree = "<group>"; };
 		4290EFC218498E2700C67769 /* CocoaSQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaSQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4290EFC518498E2700C67769 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4290EFC818498E2700C67769 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -126,7 +112,7 @@
 			files = (
 				4290EFC618498E2700C67769 /* Cocoa.framework in Frameworks */,
 				423067371849B55E00BD2A38 /* ORDA.framework in Frameworks */,
-				423067421849B5BF00BD2A38 /* TypeExtensions.framework in Frameworks */,
+				422B21321849BE63008F8BF5 /* TypeExtensions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +137,6 @@
 				42D190401849A471002EC23A /* LICENSE */,
 				42D190411849A471002EC23A /* README.md */,
 				4230672D1849B4EC00BD2A38 /* ORDA.xcodeproj */,
-				423067391849B5AD00BD2A38 /* TypeExtensions.xcodeproj */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -161,15 +146,6 @@
 			children = (
 				423067341849B4EC00BD2A38 /* ORDA.framework */,
 				423067361849B4EC00BD2A38 /* ORDATests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4230673A1849B5AD00BD2A38 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4230673F1849B5AD00BD2A38 /* TypeExtensions.framework */,
-				423067411849B5AD00BD2A38 /* TypeExtensionsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,6 +173,7 @@
 		4290EFC418498E2700C67769 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				422B21311849BE63008F8BF5 /* TypeExtensions.framework */,
 				4290EFC518498E2700C67769 /* Cocoa.framework */,
 				4290EFDA18498E2700C67769 /* XCTest.framework */,
 				4290EFC718498E2700C67769 /* Other Frameworks */,
@@ -357,10 +334,6 @@
 					ProductGroup = 4230672E1849B4EC00BD2A38 /* Products */;
 					ProjectRef = 4230672D1849B4EC00BD2A38 /* ORDA.xcodeproj */;
 				},
-				{
-					ProductGroup = 4230673A1849B5AD00BD2A38 /* Products */;
-					ProjectRef = 423067391849B5AD00BD2A38 /* TypeExtensions.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -383,20 +356,6 @@
 			fileType = wrapper.cfbundle;
 			path = ORDATests.xctest;
 			remoteRef = 423067351849B4EC00BD2A38 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4230673F1849B5AD00BD2A38 /* TypeExtensions.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = TypeExtensions.framework;
-			remoteRef = 4230673E1849B5AD00BD2A38 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		423067411849B5AD00BD2A38 /* TypeExtensionsTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = TypeExtensionsTests.xctest;
-			remoteRef = 423067401849B5AD00BD2A38 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -556,6 +515,7 @@
 					"$(inherited)",
 					/Users/firelizzard/Documents/Programming/CocoaSQLite,
 					"/Users/firelizzard/Documents/Programming/~/DerivedData/Build/Products/Debug",
+					/Users/firelizzard/Documents/Programming/CocoaSQLite/DerivedData/Build/Products/Debug,
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -576,6 +536,7 @@
 					"$(inherited)",
 					/Users/firelizzard/Documents/Programming/CocoaSQLite,
 					"/Users/firelizzard/Documents/Programming/~/DerivedData/Build/Products/Debug",
+					/Users/firelizzard/Documents/Programming/CocoaSQLite/DerivedData/Build/Products/Debug,
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
