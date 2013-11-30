@@ -10,7 +10,6 @@
 		422B21321849BE63008F8BF5 /* TypeExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422B21311849BE63008F8BF5 /* TypeExtensions.framework */; };
 		423067371849B55E00BD2A38 /* ORDA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423067341849B4EC00BD2A38 /* ORDA.framework */; };
 		423067431849B5FD00BD2A38 /* ORDA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423067341849B4EC00BD2A38 /* ORDA.framework */; };
-		426CA2FF1849EF8800212CF3 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 426CA2FE1849EF8800212CF3 /* Makefile */; };
 		4290EFC618498E2700C67769 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4290EFC518498E2700C67769 /* Cocoa.framework */; };
 		4290EFD018498E2700C67769 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4290EFCE18498E2700C67769 /* InfoPlist.strings */; };
 		4290EFDB18498E2700C67769 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4290EFDA18498E2700C67769 /* XCTest.framework */; };
@@ -390,7 +389,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				426CA2FF1849EF8800212CF3 /* Makefile in Sources */,
 				4290F00918498E4700C67769 /* ORDASQLiteDriver.m in Sources */,
 				4290F00418498E4700C67769 /* sqlite3.c in Sources */,
 				4290F00D18498E4700C67769 /* ORDASQLiteGovernor.m in Sources */,
