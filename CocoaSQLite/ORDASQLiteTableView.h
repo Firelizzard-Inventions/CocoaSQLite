@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Firelizzard Inventions. All rights reserved.
 //
 
-#import <ORDA-dev/ORDA-dev.h>
+#import <ORDA/ORDA-dev.h>
 
 @class ORDASQLiteTable;
 @protocol ORDAStatementResult;

@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <ORDA-dev/ORDA-dev.h>
+#import <ORDA/ORDA-dev.h>
 #import <CocoaSQLite/CocoaSQLite.h>
 
 @interface CocoaSQLiteTests : XCTestCase

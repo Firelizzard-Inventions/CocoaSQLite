@@ -9,7 +9,7 @@
 #import "ORDASQLiteStatement.h"
 
 #import <TypeExtensions/TypeExtensions.h>
-#import <ORDA-dev/ORDA-dev.h>
+#import <ORDA/ORDA-dev.h>
 
 #import "ORDASQLiteGovernor.h"
 #import "ORDASQLiteErrorResult.h"

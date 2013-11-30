@@ -8,7 +8,7 @@
 
 #import "ORDASQLiteTableView.h"
 
-#import <ORDA-dev/ORDA-dev.h>
+#import <ORDA/ORDA-dev.h>
 
 #import "ORDASQLiteTable.h"
 

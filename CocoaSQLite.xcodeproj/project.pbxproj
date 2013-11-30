@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		423067371849B55E00BD2A38 /* ORDA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423067341849B4EC00BD2A38 /* ORDA.framework */; };
+		423067421849B5BF00BD2A38 /* TypeExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4230673F1849B5AD00BD2A38 /* TypeExtensions.framework */; };
+		423067431849B5FD00BD2A38 /* ORDA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423067341849B4EC00BD2A38 /* ORDA.framework */; };
 		4290EFC618498E2700C67769 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4290EFC518498E2700C67769 /* Cocoa.framework */; };
 		4290EFD018498E2700C67769 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4290EFCE18498E2700C67769 /* InfoPlist.strings */; };
 		4290EFDB18498E2700C67769 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4290EFDA18498E2700C67769 /* XCTest.framework */; };
@@ -33,16 +36,40 @@
 		4290F01318498E4700C67769 /* ORDASQLiteTableResultEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 4290F00018498E4700C67769 /* ORDASQLiteTableResultEntry.m */; };
 		4290F01418498E4700C67769 /* ORDASQLiteTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4290F00118498E4700C67769 /* ORDASQLiteTableView.h */; };
 		4290F01518498E4700C67769 /* ORDASQLiteTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4290F00218498E4700C67769 /* ORDASQLiteTableView.m */; };
-		4290F07B1849946D00C67769 /* ORDA-dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4290F0791849946D00C67769 /* ORDA-dev.framework */; };
-		4290F07C1849946D00C67769 /* TypeExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4290F07A1849946D00C67769 /* TypeExtensions.framework */; };
-		4290F07D184994B900C67769 /* ORDA-dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4290F0791849946D00C67769 /* ORDA-dev.framework */; };
-		4290F07E184994B900C67769 /* TypeExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4290F07A1849946D00C67769 /* TypeExtensions.framework */; };
 		42D1903F1849A464002EC23A /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 42D1903E1849A464002EC23A /* .travis.yml */; };
 		42D190421849A471002EC23A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 42D190401849A471002EC23A /* LICENSE */; };
 		42D190431849A471002EC23A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 42D190411849A471002EC23A /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		423067331849B4EC00BD2A38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4230672D1849B4EC00BD2A38 /* ORDA.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42909B6417B31A4700DBD505;
+			remoteInfo = ORDA;
+		};
+		423067351849B4EC00BD2A38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4230672D1849B4EC00BD2A38 /* ORDA.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42D1902C1849A42E002EC23A;
+			remoteInfo = ORDATests;
+		};
+		4230673E1849B5AD00BD2A38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 423067391849B5AD00BD2A38 /* TypeExtensions.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 420D1A9C165BF5020097EE03;
+			remoteInfo = TypeExtensions;
+		};
+		423067401849B5AD00BD2A38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 423067391849B5AD00BD2A38 /* TypeExtensions.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42026AD2183EA04800B1F530;
+			remoteInfo = TypeExtensionsTests;
+		};
 		4290EFDD18498E2700C67769 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4290EFB918498E2700C67769 /* Project object */;
@@ -53,6 +80,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4230672D1849B4EC00BD2A38 /* ORDA.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORDA.xcodeproj; path = Include/ORDA/ORDA.xcodeproj; sourceTree = "<group>"; };
+		423067391849B5AD00BD2A38 /* TypeExtensions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TypeExtensions.xcodeproj; path = Include/TypeExtensions/TypeExtensions.xcodeproj; sourceTree = "<group>"; };
 		4290EFC218498E2700C67769 /* CocoaSQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaSQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4290EFC518498E2700C67769 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4290EFC818498E2700C67769 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -85,8 +114,6 @@
 		4290F00018498E4700C67769 /* ORDASQLiteTableResultEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORDASQLiteTableResultEntry.m; sourceTree = "<group>"; };
 		4290F00118498E4700C67769 /* ORDASQLiteTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORDASQLiteTableView.h; sourceTree = "<group>"; };
 		4290F00218498E4700C67769 /* ORDASQLiteTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORDASQLiteTableView.m; sourceTree = "<group>"; };
-		4290F0791849946D00C67769 /* ORDA-dev.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "ORDA-dev.framework"; path = "../~/DerivedData/Build/Products/Debug/ORDA-dev.framework"; sourceTree = "<group>"; };
-		4290F07A1849946D00C67769 /* TypeExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TypeExtensions.framework; path = "../~/DerivedData/Build/Products/Debug/TypeExtensions.framework"; sourceTree = "<group>"; };
 		42D1903E1849A464002EC23A /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		42D190401849A471002EC23A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		42D190411849A471002EC23A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -97,9 +124,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4290F07B1849946D00C67769 /* ORDA-dev.framework in Frameworks */,
 				4290EFC618498E2700C67769 /* Cocoa.framework in Frameworks */,
-				4290F07C1849946D00C67769 /* TypeExtensions.framework in Frameworks */,
+				423067371849B55E00BD2A38 /* ORDA.framework in Frameworks */,
+				423067421849B5BF00BD2A38 /* TypeExtensions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,9 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4290F07D184994B900C67769 /* ORDA-dev.framework in Frameworks */,
-				4290F07E184994B900C67769 /* TypeExtensions.framework in Frameworks */,
 				4290EFDC18498E2700C67769 /* Cocoa.framework in Frameworks */,
+				423067431849B5FD00BD2A38 /* ORDA.framework in Frameworks */,
 				4290EFDB18498E2700C67769 /* XCTest.framework in Frameworks */,
 				4290EFDF18498E2700C67769 /* CocoaSQLite.framework in Frameworks */,
 			);
@@ -118,12 +144,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4290EFB818498E2700C67769 = {
+		4230672C1849B4DF00BD2A38 /* Other */ = {
 			isa = PBXGroup;
 			children = (
 				42D1903E1849A464002EC23A /* .travis.yml */,
 				42D190401849A471002EC23A /* LICENSE */,
 				42D190411849A471002EC23A /* README.md */,
+				4230672D1849B4EC00BD2A38 /* ORDA.xcodeproj */,
+				423067391849B5AD00BD2A38 /* TypeExtensions.xcodeproj */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		4230672E1849B4EC00BD2A38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				423067341849B4EC00BD2A38 /* ORDA.framework */,
+				423067361849B4EC00BD2A38 /* ORDATests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4230673A1849B5AD00BD2A38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4230673F1849B5AD00BD2A38 /* TypeExtensions.framework */,
+				423067411849B5AD00BD2A38 /* TypeExtensionsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4290EFB818498E2700C67769 = {
+			isa = PBXGroup;
+			children = (
+				4230672C1849B4DF00BD2A38 /* Other */,
 				4290EFCB18498E2700C67769 /* CocoaSQLite */,
 				4290EFE018498E2700C67769 /* CocoaSQLiteTests */,
 				4290EFC418498E2700C67769 /* Frameworks */,
@@ -143,8 +197,6 @@
 		4290EFC418498E2700C67769 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4290F0791849946D00C67769 /* ORDA-dev.framework */,
-				4290F07A1849946D00C67769 /* TypeExtensions.framework */,
 				4290EFC518498E2700C67769 /* Cocoa.framework */,
 				4290EFDA18498E2700C67769 /* XCTest.framework */,
 				4290EFC718498E2700C67769 /* Other Frameworks */,
@@ -300,6 +352,16 @@
 			mainGroup = 4290EFB818498E2700C67769;
 			productRefGroup = 4290EFC318498E2700C67769 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4230672E1849B4EC00BD2A38 /* Products */;
+					ProjectRef = 4230672D1849B4EC00BD2A38 /* ORDA.xcodeproj */;
+				},
+				{
+					ProductGroup = 4230673A1849B5AD00BD2A38 /* Products */;
+					ProjectRef = 423067391849B5AD00BD2A38 /* TypeExtensions.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4290EFC118498E2700C67769 /* CocoaSQLite */,
@@ -307,6 +369,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		423067341849B4EC00BD2A38 /* ORDA.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ORDA.framework;
+			remoteRef = 423067331849B4EC00BD2A38 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		423067361849B4EC00BD2A38 /* ORDATests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ORDATests.xctest;
+			remoteRef = 423067351849B4EC00BD2A38 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4230673F1849B5AD00BD2A38 /* TypeExtensions.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TypeExtensions.framework;
+			remoteRef = 4230673E1849B5AD00BD2A38 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		423067411849B5AD00BD2A38 /* TypeExtensionsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TypeExtensionsTests.xctest;
+			remoteRef = 423067401849B5AD00BD2A38 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4290EFC018498E2700C67769 /* Resources */ = {

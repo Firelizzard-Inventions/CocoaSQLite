@@ -8,7 +8,7 @@
 
 #import "ORDASQLiteGovernor.h"
 
-#import <ORDA-dev/ORDA-dev.h>
+#import <ORDA/ORDA-dev.h>
 
 #import "ORDASQLiteConsts.h"
 #import "ORDASQLiteDriver.h"

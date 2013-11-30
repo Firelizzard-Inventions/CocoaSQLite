@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Firelizzard Inventions. Some rights reserved, see license.
 //
 
-#import <ORDA-dev/ORDA-dev.h>
+#import <ORDA/ORDA-dev.h>
 
 #import "ORDASQLiteConsts.h"
 

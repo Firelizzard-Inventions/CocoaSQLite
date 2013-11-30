@@ -7,7 +7,7 @@
 //
 
 #import <TypeExtensions/NSObject_Singleton.h>
-#import <ORDA-dev/ORDA-dev.h>
+#import <ORDA/ORDA-dev.h>
 
 /**
  * ORDASQLiteDriver is the ORDA SQLite implementation of ORDADriver.
