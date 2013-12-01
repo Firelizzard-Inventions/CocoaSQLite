@@ -32,8 +32,8 @@
 		return nil;
 	
 	_table = table.retain;
-	_name = [[NSString alloc] initWithFormat:@"__ORDA__%@%lu", table.name, table.nextViewID];
-	_statement = [table.governor createStatement:@"CREATE VIEW %@ SELECT [rowid] as 'rowid' FROM %@ WHERE %@", _name, table.name, clause].retain;
+	_name = [[NSString alloc] initWithFormat:@"__ORDA__%@_%lu", table.name, table.nextViewID];
+	_statement = [table.governor createStatement:@"CREATE VIEW %@ AS SELECT [rowid] as 'rowid' FROM %@ WHERE %@", _name, table.name, clause].retain;
 	_keys = nil;
 	
 	if (_statement.isError)
