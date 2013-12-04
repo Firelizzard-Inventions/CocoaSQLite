@@ -18,7 +18,7 @@
 #import "ORDASQLiteTableView.h"
 
 @implementation ORDASQLiteTable {
-	id<ORDAStatement> tableInfoStatement, foreignKeyListStatement;
+	id<ORDAStatement> _tableInfoStatement, _foreignKeyListStatement;
 }
 
 - (id)initWithGovernor:(id<ORDAGovernor>)governor withName:(NSString *)tableName
@@ -32,28 +32,28 @@
 	if (![governor isKindOfClass:[ORDASQLiteGovernor class]])
 		return (ORDASQLiteTable *)[ORDASQLiteErrorResult errorWithCode:kORDAInternalAPIMismatchErrorResultCode].retain;
 	
-	tableInfoStatement = [self.governor createStatement:@"PRAGMA table_info(%@)", self.name].retain;
-	foreignKeyListStatement = [self.governor createStatement:@"PRAGMA foreign_key_list(%@)", self.name].retain;
+	_tableInfoStatement = [self.governor createStatement:@"PRAGMA table_info(%@)", self.name].retain;
+	_foreignKeyListStatement = [self.governor createStatement:@"PRAGMA foreign_key_list(%@)", self.name].retain;
 	
 	return self;
 }
 
 - (void)dealloc
 {
-	[tableInfoStatement release];
-	[foreignKeyListStatement release];
+	[_tableInfoStatement release];
+	[_foreignKeyListStatement release];
 	
 	[super dealloc];
 }
 
 - (NSArray *)columnNames
 {
-	return tableInfoStatement.result[@"name"];
+	return _tableInfoStatement.result[@"name"];
 }
 
 - (NSArray *)primaryKeyNames
 {
-	id<ORDAStatementResult> result = tableInfoStatement.result;
+	id<ORDAStatementResult> result = _tableInfoStatement.result;
 	if (result.isError)
 		return nil;
 	
@@ -67,7 +67,7 @@
 
 - (NSArray *)foreignKeyTableNames
 {
-	return foreignKeyListStatement.result[@"table"];
+	return _foreignKeyListStatement.result[@"table"];
 }
 
 - (id)selectWhereRowidEquals:(NSNumber *)rowid
