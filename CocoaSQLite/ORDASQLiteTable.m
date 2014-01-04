@@ -17,6 +17,7 @@
 #import "ORDASQLiteTableResultEntry.h"
 #import "ORDASQLiteTableView.h"
 
+
 @implementation ORDASQLiteTable {
 	id<ORDAStatement> _tableInfoStatement, _foreignKeyListStatement;
 }
@@ -235,7 +236,7 @@
 	
 	view = [ORDASQLiteTableView viewWithTable:self andClause:clause];
 	if (!view.isError)
-		return self.views[clause] = view;
+		self.views[clause] = view;
 	return view;
 }
 

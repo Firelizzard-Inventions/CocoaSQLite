@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		422B21321849BE63008F8BF5 /* TypeExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422B21311849BE63008F8BF5 /* TypeExtensions.framework */; };
-		423067371849B55E00BD2A38 /* ORDA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423067341849B4EC00BD2A38 /* ORDA.framework */; };
-		423067431849B5FD00BD2A38 /* ORDA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423067341849B4EC00BD2A38 /* ORDA.framework */; };
+		42352D4E1877D05D0011CA48 /* ORDA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42352D4C1877D05D0011CA48 /* ORDA.framework */; };
+		42352D4F1877D05D0011CA48 /* TypeExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42352D4D1877D05D0011CA48 /* TypeExtensions.framework */; };
 		4290EFC618498E2700C67769 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4290EFC518498E2700C67769 /* Cocoa.framework */; };
 		4290EFD018498E2700C67769 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4290EFCE18498E2700C67769 /* InfoPlist.strings */; };
 		4290EFDB18498E2700C67769 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4290EFDA18498E2700C67769 /* XCTest.framework */; };
@@ -42,20 +41,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		423067331849B4EC00BD2A38 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4230672D1849B4EC00BD2A38 /* ORDA.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42909B6417B31A4700DBD505;
-			remoteInfo = ORDA;
-		};
-		423067351849B4EC00BD2A38 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4230672D1849B4EC00BD2A38 /* ORDA.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42D1902C1849A42E002EC23A;
-			remoteInfo = ORDATests;
-		};
 		4290EFDD18498E2700C67769 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4290EFB918498E2700C67769 /* Project object */;
@@ -66,9 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		422B21311849BE63008F8BF5 /* TypeExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TypeExtensions.framework; path = DerivedData/Build/Products/Debug/TypeExtensions.framework; sourceTree = "<group>"; };
-		4230672D1849B4EC00BD2A38 /* ORDA.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORDA.xcodeproj; path = Include/ORDA/ORDA.xcodeproj; sourceTree = "<group>"; };
-		426CA2FE1849EF8800212CF3 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		42352D4C1877D05D0011CA48 /* ORDA.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ORDA.framework; path = Resources/ORDA.framework; sourceTree = "<group>"; };
+		42352D4D1877D05D0011CA48 /* TypeExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TypeExtensions.framework; path = Resources/TypeExtensions.framework; sourceTree = "<group>"; };
 		4290EFC218498E2700C67769 /* CocoaSQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaSQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4290EFC518498E2700C67769 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4290EFC818498E2700C67769 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -112,8 +96,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4290EFC618498E2700C67769 /* Cocoa.framework in Frameworks */,
-				423067371849B55E00BD2A38 /* ORDA.framework in Frameworks */,
-				422B21321849BE63008F8BF5 /* TypeExtensions.framework in Frameworks */,
+				42352D4F1877D05D0011CA48 /* TypeExtensions.framework in Frameworks */,
+				42352D4E1877D05D0011CA48 /* ORDA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +106,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4290EFDC18498E2700C67769 /* Cocoa.framework in Frameworks */,
-				423067431849B5FD00BD2A38 /* ORDA.framework in Frameworks */,
 				4290EFDB18498E2700C67769 /* XCTest.framework in Frameworks */,
 				4290EFDF18498E2700C67769 /* CocoaSQLite.framework in Frameworks */,
 			);
@@ -137,19 +120,8 @@
 				42D1903E1849A464002EC23A /* .travis.yml */,
 				42D190401849A471002EC23A /* LICENSE */,
 				42D190411849A471002EC23A /* README.md */,
-				426CA2FE1849EF8800212CF3 /* Makefile */,
-				4230672D1849B4EC00BD2A38 /* ORDA.xcodeproj */,
 			);
 			name = Other;
-			sourceTree = "<group>";
-		};
-		4230672E1849B4EC00BD2A38 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				423067341849B4EC00BD2A38 /* ORDA.framework */,
-				423067361849B4EC00BD2A38 /* ORDATests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		4290EFB818498E2700C67769 = {
@@ -175,7 +147,8 @@
 		4290EFC418498E2700C67769 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				422B21311849BE63008F8BF5 /* TypeExtensions.framework */,
+				42352D4C1877D05D0011CA48 /* ORDA.framework */,
+				42352D4D1877D05D0011CA48 /* TypeExtensions.framework */,
 				4290EFC518498E2700C67769 /* Cocoa.framework */,
 				4290EFDA18498E2700C67769 /* XCTest.framework */,
 				4290EFC718498E2700C67769 /* Other Frameworks */,
@@ -331,12 +304,6 @@
 			mainGroup = 4290EFB818498E2700C67769;
 			productRefGroup = 4290EFC318498E2700C67769 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4230672E1849B4EC00BD2A38 /* Products */;
-					ProjectRef = 4230672D1849B4EC00BD2A38 /* ORDA.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				4290EFC118498E2700C67769 /* CocoaSQLite */,
@@ -344,23 +311,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		423067341849B4EC00BD2A38 /* ORDA.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ORDA.framework;
-			remoteRef = 423067331849B4EC00BD2A38 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		423067361849B4EC00BD2A38 /* ORDATests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ORDATests.xctest;
-			remoteRef = 423067351849B4EC00BD2A38 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4290EFC018498E2700C67769 /* Resources */ = {
@@ -513,6 +463,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/firelizzard/Documents/Programming/CORM/Include/CocoaSQLite/Resources,
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaSQLite/CocoaSQLite-Prefix.pch";
@@ -528,6 +482,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/firelizzard/Documents/Programming/CORM/Include/CocoaSQLite/Resources,
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaSQLite/CocoaSQLite-Prefix.pch";
