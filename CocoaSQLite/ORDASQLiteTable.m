@@ -31,20 +31,12 @@
 		return self;
 	
 	if (![governor isKindOfClass:[ORDASQLiteGovernor class]])
-		return (ORDASQLiteTable *)[ORDASQLiteErrorResult errorWithCode:kORDAInternalAPIMismatchErrorResultCode].retain;
+		return (ORDASQLiteTable *)[ORDASQLiteErrorResult errorWithCode:(ORDASQLiteResultCodeError)kORDAInternalAPIMismatchErrorResultCode];
 	
-	_tableInfoStatement = [self.governor createStatement:@"PRAGMA table_info(%@)", self.name].retain;
-	_foreignKeyListStatement = [self.governor createStatement:@"PRAGMA foreign_key_list(%@)", self.name].retain;
+	_tableInfoStatement = [self.governor createStatement:@"PRAGMA table_info(%@)", self.name];
+	_foreignKeyListStatement = [self.governor createStatement:@"PRAGMA foreign_key_list(%@)", self.name];
 	
 	return self;
-}
-
-- (void)dealloc
-{
-	[_tableInfoStatement release];
-	[_foreignKeyListStatement release];
-	
-	[super dealloc];
 }
 
 - (NSArray *)columnNames
@@ -101,7 +93,7 @@
 	else {
 		va_list args;
 		va_start(args, format);
-		clause = [[[NSString alloc] initWithFormat:format arguments:args] autorelease];
+		clause = [[NSString alloc] initWithFormat:format arguments:args];
 		va_end(args);
 	}
 	
@@ -170,7 +162,7 @@
 	else {
 		va_list args;
 		va_start(args, format);
-		clause = [[[NSString alloc] initWithFormat:format arguments:args] autorelease];
+		clause = [[NSString alloc] initWithFormat:format arguments:args];
 		va_end(args);
 	}
 	
@@ -193,7 +185,7 @@
 	else {
 		va_list args;
 		va_start(args, format);
-		clause = [[[NSString alloc] initWithFormat:format arguments:args] autorelease];
+		clause = [[NSString alloc] initWithFormat:format arguments:args];
 		va_end(args);
 	}
 	
@@ -226,7 +218,7 @@
 	else {
 		va_list args;
 		va_start(args, format);
-		clause = [[[NSString alloc] initWithFormat:format arguments:args] autorelease];
+		clause = [[NSString alloc] initWithFormat:format arguments:args];
 		va_end(args);
 	}
 	

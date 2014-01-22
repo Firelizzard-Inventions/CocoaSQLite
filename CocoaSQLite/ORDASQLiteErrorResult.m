@@ -20,7 +20,7 @@
 
 + (ORDASQLiteErrorResult *)errorWithCode:(ORDASQLiteResultCodeError)code andSQLiteErrorCode:(int)status
 {
-	return [[[self alloc] initWithCode:code andSQLiteErrorCode:status] autorelease];
+	return [[self alloc] initWithCode:code andSQLiteErrorCode:status];
 }
 
 + (ORDASQLiteErrorResult *)errorWithSQLiteErrorCode:(int)status

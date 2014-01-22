@@ -21,7 +21,7 @@
 
 + (ORDASQLiteTableResultEntry *)tableResultEntryWithRowID:(NSNumber *)rowid andData:(NSDictionary *)data forTable:(id<ORDATable>)table
 {
-	return [[[self alloc] initWithRowID:rowid andData:data forTable:table] autorelease];
+	return [[self alloc] initWithRowID:rowid andData:data forTable:table];
 }
 
 - (id)initWithObjects:(const id [])objects forKeys:(const id<NSCopying> [])keys count:(NSUInteger)cnt
@@ -35,7 +35,7 @@
 	
 	id locks[cnt];
 	for (int i = 0; i < cnt; i++)
-		locks[i] = [[[NSLock alloc] init] autorelease];
+		locks[i] = [[NSLock alloc] init];
 	_locks = [[NSDictionary alloc] initWithObjects:locks forKeys:keys count:cnt];
 	
 	for (id key in _backing)
@@ -52,8 +52,8 @@
 	if (![table isKindOfClass:ORDASQLiteTable.class])
 		return nil;
 	
-	_rowid = rowid.retain;
-	_table = table.retain;
+	_rowid = rowid;
+	_table = table;
 	
 	[self addObserver:self forKeyPath:@"rowid" options:NSKeyValueObservingOptionNew context:nil];
 	
@@ -67,13 +67,6 @@
 	
 	for (id key in _backing)
 		[self removeObserver:self forKeyPath:[key description] context:nil];
-	
-	[_table release];
-	[_rowid release];
-	[_locks release];
-	[_backing release];
-	
-	[super dealloc];
 }
 
 - (NSUInteger)count

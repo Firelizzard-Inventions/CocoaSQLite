@@ -12,7 +12,7 @@
 
 #import "ORDASQLiteTable.h"
 
-#define INITFAIL(ret) { [self release]; return (ORDASQLiteTableView *)ret; }
+#define INITFAIL(ret) { /*[self release];*/ return (ORDASQLiteTableView *)ret; }
 
 @implementation ORDASQLiteTableView {
 	NSString * _name;
@@ -23,7 +23,7 @@
 
 + (ORDASQLiteTableView *)viewWithTable:(ORDASQLiteTable *)table andClause:(NSString *)clause
 {
-	return [[[self alloc] initWithTable:table andClause:clause] autorelease];
+	return [[self alloc] initWithTable:table andClause:clause];
 }
 
 - (id)initWithTable:(ORDASQLiteTable *)table andClause:(NSString *)clause
@@ -31,20 +31,19 @@
 	if (!(self = [super initWithSucessCode]))
 		return nil;
 	
-	_table = table.retain;
+	_table = table;
 	_name = [[NSString alloc] initWithFormat:@"__ORDA__%@_%lu", table.name, table.nextViewID];
-	_statement = [table.governor createStatement:@"CREATE VIEW %@ AS SELECT [rowid] as 'rowid' FROM %@ WHERE %@", _name, table.name, clause].retain;
+	_statement = [table.governor createStatement:@"CREATE VIEW %@ AS SELECT [rowid] as 'rowid' FROM %@ WHERE %@", _name, table.name, clause];
 	_keys = nil;
 	
 	if (_statement.isError)
 		INITFAIL(_statement);
 	
-	id<ORDAResult> result = _statement.result;
+	id<ORDAResult> result = [_statement result];
 	if (result.isError)
 		INITFAIL(result);
 	
-	[_statement release];
-	_statement = [table.governor createStatement:@"SELECT * FROM %@", _name].retain;
+	_statement = [table.governor createStatement:@"SELECT * FROM %@", _name];
 	if (_statement.isError)
 		INITFAIL(_statement);
 	
@@ -52,24 +51,16 @@
 	if (result.isError)
 		INITFAIL(result);
 	
-	_keys = [result[@"rowid"] retain];
+	_keys = result[@"rowid"];
 	
 	return self;
 }
 
 - (void)dealloc
 {
-	[_keys release];
-	[_statement release];
-	
 	_statement = [self.table.governor createStatement:@"DROP VIEW %@", _name];
 	if (!_statement.isError)
 		[_statement result];
-	
-	[_name release];
-	[_table release];
-	
-	[super dealloc];
 }
 
 #pragma mark Accessors
@@ -103,8 +94,7 @@
 	[self willChangeValueForKey:@"self"];
 	[self willChangeValueForKey:@"keys"];
 	if (countChanging) [self willChangeValueForKey:@"count"];
-	[self.keys release];
-	_keys = keys.retain;
+	_keys = keys;
 	if (countChanging) [self didChangeValueForKey:@"count"];
 	[self didChangeValueForKey:@"keys"];
 	[self didChangeValueForKey:@"self"];

@@ -27,14 +27,14 @@
 		return self;
 	
 	if (![governor isKindOfClass:[ORDASQLiteGovernor class]])
-		return (ORDASQLiteStatement *)[ORDASQLiteErrorResult errorWithCode:kORDAInternalAPIMismatchErrorResultCode].retain;
+		return (ORDASQLiteStatement *)[ORDASQLiteErrorResult errorWithCode:(ORDASQLiteResultCodeError)kORDAInternalAPIMismatchErrorResultCode];
 	
 	_result = nil;
 	
 	char * rest;
 	int status = sqlite3_prepare_v2(((ORDASQLiteGovernor *)self.governor).connection, [SQL cStringUsingEncoding:NSASCIIStringEncoding], (int)SQL.length, &_statement, (const char **) &rest);
 	if (status != SQLITE_OK)
-		return (ORDASQLiteStatement *)[ORDASQLiteErrorResult errorWithCode:(ORDACode)kORDABadStatementSQLErrorResultCode andSQLiteErrorCode:status].retain;
+		return (ORDASQLiteStatement *)[ORDASQLiteErrorResult errorWithCode:(ORDACode)kORDABadStatementSQLErrorResultCode andSQLiteErrorCode:status];
 	
 	if (!rest[0]) {
 		_nextStatement = nil;
@@ -43,7 +43,7 @@
 	
 	_nextStatement = [[ORDASQLiteStatement alloc] initWithGovernor:governor withSQL:@(rest)];
 	if (!_nextStatement)
-		return (ORDASQLiteStatement *)[ORDASQLiteErrorResult errorWithCode:(ORDACode)kORDAInternalErrorResultCode].retain;
+		return (ORDASQLiteStatement *)[ORDASQLiteErrorResult errorWithCode:(ORDACode)kORDAInternalErrorResultCode];
 	if (_nextStatement.isError)
 		return _nextStatement;
 	
@@ -53,28 +53,30 @@ exit:
 
 - (void)dealloc
 {
-	if (_statement) sqlite3_finalize(_statement);
-	[_result release];
-	[_nextStatement release];
-	
-	[super dealloc];
+	if (_statement)
+		sqlite3_finalize(_statement);
 }
 
 - (id<ORDAStatementResult>)result
 {
 	if (!_result) {
-		int status = sqlite3_step(self.statement);
+		int status, rows, columns, changed;
+		long long lastID;
+		NSMutableArray * colarr, * dictArray;
+		NSMutableDictionary * arrayDict;
+		
+		status = sqlite3_step(self.statement);
 		if (!(status == SQLITE_DONE || status == SQLITE_ROW))
 			goto done;
 		
-		int rows = -1;
-		int columns = sqlite3_column_count(self.statement);
-		int changed = sqlite3_changes(((ORDASQLiteGovernor *)self.governor).connection);
-		long long lastID = sqlite3_last_insert_rowid(((ORDASQLiteGovernor *)self.governor).connection);
+		rows = -1;
+		columns = sqlite3_column_count(self.statement);
+		changed = sqlite3_changes(((ORDASQLiteGovernor *)self.governor).connection);
+		lastID = sqlite3_last_insert_rowid(((ORDASQLiteGovernor *)self.governor).connection);
 		
-		NSMutableArray * colarr = [NSMutableArray arrayWithCapacity:columns];
-		NSMutableDictionary * arrayDict = [NSMutableDictionary dictionaryWithCapacity:columns];
-		NSMutableArray * dictArray = [NSMutableArray array];
+		colarr = [NSMutableArray arrayWithCapacity:columns];
+		arrayDict = [NSMutableDictionary dictionaryWithCapacity:columns];
+		dictArray = [NSMutableArray array];
 		
 		if (columns > 0) {
 			for (int i = 0; i < columns; i++)
@@ -97,15 +99,13 @@ exit:
 				}
 			} while ((status = sqlite3_step(self.statement)) == SQLITE_ROW);
 			rows = (int)dictArray.count;
-		} else {
-			
 		}
 		
 	done:
 		if (status == SQLITE_DONE)
-			return _result = [ORDAStatementResultImpl statementResultWithChanged:changed andLastID:lastID andRows:rows andColumns:colarr andDictionaryOfArrays:arrayDict andArrayOfDictionaries:dictArray].retain;
+			return _result = [ORDAStatementResultImpl statementResultWithChanged:changed andLastID:lastID andRows:rows andColumns:colarr andDictionaryOfArrays:arrayDict andArrayOfDictionaries:dictArray];
 		else
-			return _result = (id<ORDAStatementResult>)[ORDASQLiteErrorResult errorWithSQLiteErrorCode:status].retain;
+			return _result = (id<ORDAStatementResult>)[ORDASQLiteErrorResult errorWithSQLiteErrorCode:status];
 	}
 	
 	return _result;
@@ -116,7 +116,6 @@ exit:
 	if (!_result)
 		return nil;
 	
-	[_result release];
 	_result = nil;
 	
 	return [ORDASQLiteErrorResult errorWithSQLiteErrorCode:sqlite3_reset(self.statement)];
