@@ -39,7 +39,7 @@ void update_hook(void * data, int type, char const * dbname, char const * tbname
 			break;
 	}
 	
-	ORDASQLiteGovernor * gov = data;
+	ORDASQLiteGovernor * gov = (__bridge ORDASQLiteGovernor *)(data);
 	
 	[gov.tables[@(tbname)] tableUpdateDidOccur:ordaType toRowWithKey:@(rowid)];
 }
@@ -55,22 +55,22 @@ void update_hook(void * data, int type, char const * dbname, char const * tbname
 		return self;
 	
 	if (!URL)
-		return (ORDASQLiteGovernor *)[ORDASQLiteErrorResult errorWithCode:kORDANilURLErrorResultCode].retain;
+		return (ORDASQLiteGovernor *)[ORDASQLiteErrorResult errorWithCode:(ORDASQLiteResultCodeError)kORDANilURLErrorResultCode];
 	
 	NSString * path = URL.relativePath;
 	if (!path)
-		return (ORDASQLiteGovernor *)[ORDASQLiteErrorResult errorWithCode:kORDABadURLErrorResultCode].retain;
+		return (ORDASQLiteGovernor *)[ORDASQLiteErrorResult errorWithCode:(ORDASQLiteResultCodeError)kORDABadURLErrorResultCode];
 	
 	if (![[NSFileManager defaultManager] fileExistsAtPath:path])
-		return (ORDASQLiteGovernor *)[ORDASQLiteErrorResult errorWithCode:kORDASQLiteFileDoesNotExistErrorResultCode].retain;
+		return (ORDASQLiteGovernor *)[ORDASQLiteErrorResult errorWithCode:kORDASQLiteFileDoesNotExistErrorResultCode];
 	
 	int status = sqlite3_open([path cStringUsingEncoding:NSUTF8StringEncoding], &_connection);
 	if (status != SQLITE_OK)
-		return (ORDASQLiteGovernor *)[ORDASQLiteErrorResult errorWithCode:(ORDACode)kORDAConnectionErrorResultCode andSQLiteErrorCode:status].retain;
+		return (ORDASQLiteGovernor *)[ORDASQLiteErrorResult errorWithCode:(ORDACode)kORDAConnectionErrorResultCode andSQLiteErrorCode:status];
 	
-	sqlite3_update_hook(self.connection, &update_hook, self);
+	sqlite3_update_hook(self.connection, &update_hook, (__bridge void *)self);
 	
-	_tables = [[NSMutableDictionary dictionary] retain];
+	_tables = [NSMutableDictionary dictionary];
 	
 	return self;
 }
@@ -79,15 +79,13 @@ void update_hook(void * data, int type, char const * dbname, char const * tbname
 {
 	if (_connection)
 		sqlite3_close(_connection);
-	
-	[super dealloc];
 }
 
 - (id<ORDAStatement>)createStatement:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2)
 {
 	va_list args;
 	va_start(args, format);
-	NSString * statementSQL = [[[NSString alloc] initWithFormat:format arguments:args] autorelease];
+	NSString * statementSQL = [[NSString alloc] initWithFormat:format arguments:args];
 	va_end(args);
 	
 	return [ORDASQLiteStatement statementWithGovernor:self withSQL:statementSQL];

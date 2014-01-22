@@ -40,7 +40,7 @@
 
 - (id<ORDAGovernor>)governorForURL:(NSURL *)url
 {
-	return [[[ORDASQLiteGovernor alloc] initWithURL:url] autorelease];
+	return [[ORDASQLiteGovernor alloc] initWithURL:url];
 }
 
 @end
